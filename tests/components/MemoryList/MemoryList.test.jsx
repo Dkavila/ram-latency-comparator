@@ -1,10 +1,9 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { vi } from 'vitest'; // Importando vi para mocks
+import { vi } from 'vitest';
 import MemoryList from "../../../src/components/MemoryList/MemoryList.jsx";
 
 describe('MemoryList Component', () => {
-  // Gerar as memórias dinamicamente de CL 1 até CL 80 com velocidade 8000
   const memories = Array.from({ length: 80 }, (_, index) => ({
     id: index + 1,
     name: `Memory ${index + 1}`,
@@ -15,10 +14,9 @@ describe('MemoryList Component', () => {
   it('renders MemoryList table correctly', () => {
     render(<MemoryList memories={memories} removeMemory={vi.fn()} />);
     
-    // Verifique se os textos "Memory 1", "Memory 2", ..., "Memory 80" aparecem na tela
     memories.forEach((memory) => {
       const memoryElement = screen.queryByText(memory.name);
-      expect(memoryElement).toBeTruthy(); // Verifica se o elemento foi encontrado
+      expect(memoryElement).toBeTruthy(); 
     });
   });
 

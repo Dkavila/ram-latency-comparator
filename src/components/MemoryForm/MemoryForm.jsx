@@ -5,7 +5,7 @@ const MemoryForm = ({ addMemory }) => {
   const [name, setName] = useState('');
   const [speed, setSpeed] = useState('');
   const [cl, setCl] = useState('');
-  const [type, setType] = useState('DDR1'); // Tipo de memória padrão
+  const [type, setType] = useState('DDR1');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -14,7 +14,7 @@ const MemoryForm = ({ addMemory }) => {
       setName('');
       setSpeed('');
       setCl('');
-      setType('DDR1'); // Resetar para o valor padrão após o envio
+      setType('DDR1');
     }
   };
 

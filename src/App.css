@@ -1,21 +1,5 @@
-/* Layout geral do app */
 .app-container {
   width: 100%;
-  max-width: 800px; /* Defina a largura total do app */
-  margin: 0 auto; /* Centraliza o app na tela */
-}
-
-.memory-list-container {
-  width: 100%; /* Mesma largura do formulário */
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th, td {
-  border: 1px solid #ccc;
-  padding: 10px;
-  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
 }

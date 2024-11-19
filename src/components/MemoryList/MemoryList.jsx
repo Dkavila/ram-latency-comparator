@@ -1,7 +1,8 @@
 import React from 'react';
-import { calculateLatency } from '../../utils/latencyCalculator'; // Função de latência
-import { calculateScore } from '../../utils/scoreCalculator'; // Função de nota
-import { calculateColor } from '../../utils/colorCalculator'; // Função de cor
+import { calculateLatency } from '../../utils/latencyCalculator'; 
+import { calculateScore } from '../../utils/scoreCalculator';
+import { calculateColor } from '../../utils/colorCalculator';
+import './MemoryList.css';
 
 const MemoryList = ({ memories, removeMemory }) => {
   return (
@@ -12,7 +13,7 @@ const MemoryList = ({ memories, removeMemory }) => {
           <th>Nome</th>
           <th>MT/s</th>
           <th>CL</th>
-          <th>Tipo</th> {/* Nova coluna para Tipo */}
+          <th>Tipo</th>
           <th>Latência (ns)</th>
           <th>Nota</th>
           <th>Ações</th>
@@ -20,19 +21,19 @@ const MemoryList = ({ memories, removeMemory }) => {
       </thead>
       <tbody>
         {memories.map((memory) => {
-          const latency = calculateLatency(memory.cl, memory.speed);  // Calcular latência
-          const score = calculateScore(latency, memory.type);  // Calcular nota com base na latência
-          const color = calculateColor(score);  // Calcular a cor baseada na nota
-          
+          const latency = calculateLatency(memory.cl, memory.speed);
+          const score = calculateScore(latency, memory.type);
+          const color = calculateColor(score);
+
           return (
             <tr key={memory.id}>
               <td>{memory.id}</td>
               <td>{memory.name}</td>
               <td>{memory.speed}</td>
               <td>{memory.cl}</td>
-              <td>{memory.type}</td> {/* Exibindo o tipo de memória */}
+              <td>{memory.type}</td>
               <td>{latency !== null ? latency : 'N/A'}</td>
-              <td style={{ color: color }}>{score.toFixed(2)}</td> {/* Aplicando a cor */}
+              <td style={{ color: color }}>{score.toFixed(2)}</td>
               <td>
                 <button onClick={() => removeMemory(memory.id)}>Remover</button>
               </td>

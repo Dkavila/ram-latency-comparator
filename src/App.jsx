@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import MemoryForm from './components/MemoryForm/MemoryForm';
 import MemoryList from './components/MemoryList/MemoryList';
-import './App.css'; // Estilos adicionados
+import './App.css';
 
 const App = () => {
   const [memories, setMemories] = useState([
