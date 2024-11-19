@@ -1,0 +1,52 @@
+.memory-list-container {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .memory-inputs {
+    margin-bottom: 20px;
+  }
+  
+  .memory-inputs input {
+    margin: 5px;
+    padding: 8px;
+    width: 150px;
+  }
+  
+  .memory-inputs button {
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .memory-list {
+    margin-top: 20px;
+  }
+  
+  .memory-item {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: darkred;
+  }
+  

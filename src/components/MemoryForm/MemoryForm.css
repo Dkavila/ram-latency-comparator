@@ -1,0 +1,35 @@
+/* Layout do formulário */
+.memory-form {
+  display: flex;
+  justify-content: space-between; /* Campos alinhados lado a lado */
+  align-items: center;
+  gap: 10px; /* Espaço entre os campos */
+  width: 100%; /* Igualar a largura à lista */
+  margin-bottom: 20px; /* Espaço entre o formulário e a lista */
+}
+
+.memory-form input {
+  flex: 1; /* Campos ocupam o mesmo espaço */
+  padding: 8px;
+  font-size: 14px;
+}
+
+.memory-form select { /* Inclui o seletor no mesmo estilo dos inputs */
+  flex: 1; /* Campos ocupam o mesmo espaço */
+  padding: 8px;
+  font-size: 14px;
+  height: 36px; /* Altura padrão para todos os campos */
+}
+
+.memory-form button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.memory-form button:hover {
+  background-color: #0056b3;
+}
