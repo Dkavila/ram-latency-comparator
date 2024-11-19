@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
+import './App.css';
+import './i18n';  // Importando o i18n
+import { useTranslation } from 'react-i18next';
 import MemoryForm from './components/MemoryForm/MemoryForm';
 import MemoryList from './components/MemoryList/MemoryList';
-import './App.css';
 
 const App = () => {
+  const { t, i18n } = useTranslation();  // Hook do react-i18next
   const [memories, setMemories] = useState([
     { id: 1, name: 'Memory 1', speed: 8000, cl: 1, type: 'DDR5' },
     { id: 2, name: 'Memory 2', speed: 8000, cl: 10, type: 'DDR5' },
@@ -27,8 +30,16 @@ const App = () => {
     setMemories(memories.filter((memory) => memory.id !== id));
   };
 
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+  };
+
   return (
     <div className="app-container">
+      <button onClick={() => changeLanguage('en')}>English</button>
+      <button onClick={() => changeLanguage('pt')}>Português</button>
+      <button onClick={() => changeLanguage('es')}>Español</button>
+
       <MemoryForm addMemory={addMemory} />
       <MemoryList memories={memories} removeMemory={removeMemory} />
     </div>

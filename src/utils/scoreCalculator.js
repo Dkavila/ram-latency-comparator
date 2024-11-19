@@ -34,3 +34,4 @@ export const calculateScore = (latency, memoryType) => {
   const finalScore = Math.min(Math.max(score + bonus, 0), 10);
 
   return parseFloat(finalScore.toFixed(2));
+}

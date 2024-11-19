@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import './MemoryForm.css';
+import { useTranslation } from 'react-i18next';
 
 const MemoryForm = ({ addMemory }) => {
+  const { t } = useTranslation();
   const [name, setName] = useState('');
   const [speed, setSpeed] = useState('');
   const [cl, setCl] = useState('');
@@ -10,7 +12,7 @@ const MemoryForm = ({ addMemory }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (speed && cl) {
-      addMemory({ name: name || 'Sem nome', speed, cl, type });
+      addMemory({ name: name || '', speed, cl, type });
       setName('');
       setSpeed('');
       setCl('');
@@ -22,19 +24,19 @@ const MemoryForm = ({ addMemory }) => {
     <form onSubmit={handleSubmit} className="memory-form">
       <input
         type="text"
-        placeholder="Nome da Memória (opcional)"
+        placeholder={t('memoryForm.name')}
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
       <input
         type="number"
-        placeholder="Speed (MT/s)"
+        placeholder={t('memoryForm.speed')}
         value={speed}
         onChange={(e) => setSpeed(e.target.value)}
       />
       <input
         type="number"
-        placeholder="CL"
+        placeholder={t('memoryForm.cl')}
         value={cl}
         onChange={(e) => setCl(e.target.value)}
       />
@@ -45,7 +47,7 @@ const MemoryForm = ({ addMemory }) => {
         <option value="DDR4">DDR4</option>
         <option value="DDR5">DDR5</option>
       </select>
-      <button type="submit">+</button>
+      <button type="submit">{t('memoryForm.add')}</button>
     </form>
   );
 };

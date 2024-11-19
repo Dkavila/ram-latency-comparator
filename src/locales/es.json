@@ -1,0 +1,23 @@
+{
+    "memoryForm": {
+      "name": "Nombre de la memoria (opcional)",
+      "speed": "Velocidad (MT/s)",
+      "cl": "CL",
+      "type": "Tipo",
+      "add": "+"
+    },
+    "memoryList": {
+      "header": {
+        "id": "#",
+        "name": "Nombre",
+        "speed": "MT/s",
+        "cl": "CL",
+        "type": "Tipo",
+        "latency": "Latencia (ns)",
+        "score": "Puntaje",
+        "actions": "Acciones"
+      },
+      "remove": "Eliminar"
+    }
+  }
+  

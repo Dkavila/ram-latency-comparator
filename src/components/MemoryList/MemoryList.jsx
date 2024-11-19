@@ -1,22 +1,25 @@
 import React from 'react';
-import { calculateLatency } from '../../utils/latencyCalculator'; 
+import { calculateLatency } from '../../utils/latencyCalculator';
 import { calculateScore } from '../../utils/scoreCalculator';
 import { calculateColor } from '../../utils/colorCalculator';
+import { useTranslation } from 'react-i18next';
 import './MemoryList.css';
 
 const MemoryList = ({ memories, removeMemory }) => {
+  const { t } = useTranslation(); 
+  
   return (
     <table>
       <thead>
         <tr>
-          <th>#</th>
-          <th>Nome</th>
-          <th>MT/s</th>
-          <th>CL</th>
-          <th>Tipo</th>
-          <th>Latência (ns)</th>
-          <th>Nota</th>
-          <th>Ações</th>
+          <th>{t('memoryList.header.id')}</th>
+          <th>{t('memoryList.header.name')}</th>
+          <th>{t('memoryList.header.speed')}</th>
+          <th>{t('memoryList.header.cl')}</th>
+          <th>{t('memoryList.header.type')}</th>
+          <th>{t('memoryList.header.latency')}</th>
+          <th>{t('memoryList.header.score')}</th>
+          <th>{t('memoryList.header.actions')}</th>
         </tr>
       </thead>
       <tbody>
@@ -35,7 +38,9 @@ const MemoryList = ({ memories, removeMemory }) => {
               <td>{latency !== null ? latency : 'N/A'}</td>
               <td style={{ color: color }}>{score.toFixed(2)}</td>
               <td>
-                <button onClick={() => removeMemory(memory.id)}>Remover</button>
+                <button onClick={() => removeMemory(memory.id)}>
+                  {t('memoryList.remove')}
+                </button>
               </td>
             </tr>
           );
