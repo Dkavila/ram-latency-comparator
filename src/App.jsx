@@ -30,10 +30,12 @@ const App = () => {
   };
 
   return (
-    <div className="app-container">
-      <Header setLanguage={setLanguage} /> {/* Passando o setLanguage para Header */}
-      <MemoryForm addMemory={addMemory} />
-      <MemoryList memories={memories} removeMemory={removeMemory} />
+    <div className="main-container">
+      <div className="app-container">
+        <Header setLanguage={setLanguage} />
+        <MemoryForm addMemory={addMemory} />
+        <MemoryList memories={memories} removeMemory={removeMemory} />
+      </div>
     </div>
   );
 };
