@@ -1,24 +1,18 @@
-/* Layout do formulário */
+/* src/components/MemoryForm/MemoryForm.css */
+
 .memory-form {
   display: flex;
-  justify-content: space-between; /* Campos alinhados lado a lado */
-  align-items: center;
-  gap: 10px; /* Espaço entre os campos */
-  width: 100%; /* Igualar a largura à lista */
-  margin-bottom: 20px; /* Espaço entre o formulário e a lista */
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
-.memory-form input {
-  flex: 1; /* Campos ocupam o mesmo espaço */
-  padding: 8px;
-  font-size: 14px;
-}
-
-.memory-form select { /* Inclui o seletor no mesmo estilo dos inputs */
-  flex: 1; /* Campos ocupam o mesmo espaço */
-  padding: 8px;
-  font-size: 14px;
-  height: 36px; /* Altura padrão para todos os campos */
+.input-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .memory-form button {

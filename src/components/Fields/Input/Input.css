@@ -1,0 +1,33 @@
+/* src/components/Fields/Input/Input.css */
+
+.input-container {
+  position: relative;
+}
+
+.input-field {
+  width: 100%;
+  font-size: 16px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.input-field.error {
+  border-color: red;
+  outline: 2px solid red;
+}
+
+.input-container .error-message {
+  position: relative;
+  left: 0;
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+  pointer-events: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
