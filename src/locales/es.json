@@ -1,23 +1,26 @@
 {
-    "memoryForm": {
-      "name": "Nombre de la memoria (opcional)",
-      "speed": "Velocidad (MT/s)",
+  "header": {
+    "app_name": "Memory Latency Breakdown"
+  },
+  "memoryForm": {
+    "name": "Nombre de la memoria (opcional)",
+    "speed": "Velocidad (MT/s)",
+    "cl": "CL",
+    "type": "Tipo",
+    "add": "+"
+  },
+  "memoryList": {
+    "header": {
+      "id": "#",
+      "name": "Nombre",
+      "speed": "MT/s",
       "cl": "CL",
       "type": "Tipo",
-      "add": "+"
+      "latency": "Latencia (ns)",
+      "score": "Puntaje",
+      "actions": "Acciones"
     },
-    "memoryList": {
-      "header": {
-        "id": "#",
-        "name": "Nombre",
-        "speed": "MT/s",
-        "cl": "CL",
-        "type": "Tipo",
-        "latency": "Latencia (ns)",
-        "score": "Puntaje",
-        "actions": "Acciones"
-      },
-      "remove": "Eliminar"
-    }
+    "remove": "Eliminar"
   }
+}
   
