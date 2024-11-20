@@ -1,27 +1,38 @@
 // src/components/MemoryForm/MemoryForm.jsx
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import Input from '../Fields/Input/Input';
 import Select from '../Fields/Select/Select';
 import './MemoryForm.css';
 
 const MemoryForm = ({ addMemory }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [name, setName] = useState('');
   const [speed, setSpeed] = useState('');
   const [cl, setCl] = useState('');
   const [type, setType] = useState('');
   const [errors, setErrors] = useState({});
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
+  const validateFields = () => {
     const newErrors = {};
     if (!speed) newErrors.speed = t('memoryForm.required');
     if (!cl) newErrors.cl = t('memoryForm.required');
     if (!type) newErrors.type = t('memoryForm.required');
+    return newErrors;
+  };
 
+  useEffect(() => {
+    if (Object.keys(errors).length > 0) {
+      const updatedErrors = validateFields();
+      setErrors(updatedErrors);
+    }
+  }, [i18n.language]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const newErrors = validateFields();
     setErrors(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
