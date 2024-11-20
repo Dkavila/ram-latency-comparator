@@ -3,7 +3,7 @@
     "app_name": "Memory Latency Breakdown"
   },
   "memoryForm": {
-    "name": "Nome da Memória (opcional)",
+    "name": "Nome da Memória",
     "speed": "Frequência (MT/s)",
     "cl": "CL",
     "type": "Tipo",
