@@ -1,3 +1,5 @@
+// src/utils/colorCalculator.js
+
 export const calculateColor = (score) => {
 
     const normalizedScore = Math.max(0, Math.min(10, score));

@@ -1,3 +1,5 @@
+// src/utils/scoreCalculator.js
+
 const getMemoryBonus = (memoryType) => {
   const memoryData = {
     DDR1: { bonus: 0 },

@@ -1,3 +1,5 @@
+// src/components/MemoryList/MemoryList.jsx
+
 import React from 'react';
 import { calculateLatency } from '../../utils/latencyCalculator';
 import { calculateScore } from '../../utils/scoreCalculator';
