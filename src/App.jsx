@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import MemoryForm from './components/MemoryForm/MemoryForm';
 import MemoryList from './components/MemoryList/MemoryList';
 import Header from './components/Header/Header';
+import Disclaimers from './components/Disclaimers/Disclaimers';
 import './App.css';
 
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
         <Header setLanguage={setLanguage} />
         <MemoryForm addMemory={addMemory} />
         <MemoryList memories={memories} removeMemory={removeMemory} />
+        <Disclaimers />
       </div>
     </div>
   );

@@ -22,6 +22,13 @@
       "actions": "Ações"
     },
     "remove": "Remover"
+  },
+  "disclaimers": {
+    "title": "Avisos",
+    "latencyCalculation": "A função utilizada para calcular a latência é: (1 / (mts / 2) * cl) * 1000 para calcular os nanosegundos.",
+    "scoreExplanation": "Para diferenciar as memórias, foi aplicada uma punição em cada uma delas no score. Este é um método subjetivo.",
+    "subjectivity": "Este método é subjetivo, o que significa que não é uma medida absoluta, mas sim uma aproximação.",
+    "goodScores": "Um score acima de 6 é considerado um bom valor."
   }
 }
   
