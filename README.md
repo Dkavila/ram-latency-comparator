@@ -2,6 +2,11 @@
 
 **Memory Latency Breakdown** is an application designed for comparing memory modules, focusing on attributes like speed, CAS latency (CL), and type. This tool allows users to add, remove, and evaluate memory details in an intuitive way.
 
+## 🏃Running!
+
+Actually running as a Vercel App: [Memory Latency Breakdown
+](https://ram-latency-comparator.vercel.app/)
+
 ## 🚀 Getting Started
 
 These instructions will help you set up the project on your local machine for development and testing purposes.
