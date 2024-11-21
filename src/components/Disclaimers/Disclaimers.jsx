@@ -14,7 +14,6 @@ const Disclaimers = () => {
 
   return (
     <div>
-      {/* Botão para abrir o modal, com classe específica */}
       <div className="disclaimers-btn-container">
         <button className="disclaimers-btn" onClick={toggleModal}>
           {t('disclaimers.title')}

@@ -53,4 +53,4 @@ Buy a teammate a coffee ☕
 Give public thanks 🫂
 And more!
 
-⌨️ with 🧠 by Derick Avila 😊
+Made with 🧠 by Derick Avila 😊
