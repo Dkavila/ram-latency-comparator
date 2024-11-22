@@ -7,7 +7,7 @@ import { t } from 'i18next';
 const Footer = () => {
   return (
     <footer className="footer">
-      <p>© 2024 Derick Avila. {t('footer.rightsReserved')}</p>
+      <p>© {new Date().getFullYear()} Derick Avila. {t('footer.rightsReserved')}</p>
       <p>
         <a href="https://www.linkedin.com/in/derick-avila" target="_blank" rel="noopener noreferrer">
           LinkedIn
