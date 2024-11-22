@@ -1,55 +1,87 @@
 /* src/components/Header/Header.css */
 
 .header {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 20px 30px;
+  background-color: #1e2a3a;
+  color: #fff;
+  border-bottom: 3px solid #007bff;
+  margin: 20px;
+}
+
+.logo {
+  flex-shrink: 0;
+}
+
+.logo-image {
+  height: 50px;
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  margin: 0;
 }
 
 .language-selector {
   position: relative;
-  z-index: 1000;
+  display: flex;
+  align-items: center;
 }
 
 .language-button {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  width: 50px;
+  height: 50px; 
+  border-radius: 30px;
   border: none;
   background-color: #007bff;
-  color: #fff;
+  color: white;
   font-weight: bold;
   font-size: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-}
-
-.language-dropdown {
-  position: absolute;
-  top: 50px;
-  right: 0;
-  background-color: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px); 
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
+  transition: width 0.3s ease;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
+.language-button.expanded {
+  width: 150px;
+}
 
-.language-dropdown button {
-  display: block;
-  width: 100%;
-  padding: 10px 20px;
-  text-align: left;
+.language-options {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.language-options.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.language-options button {
   background: none;
   border: none;
+  color: white;
+  font-size: 14px;
   cursor: pointer;
+  padding: 5px 15px;
 }
 
-.language-dropdown button:hover {
-  background-color: #a0a0a0;
+.language-options button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 100px;
 }

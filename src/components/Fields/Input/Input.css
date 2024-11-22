@@ -15,14 +15,14 @@
 }
 
 .input-field.error {
-  border-color: red;
-  outline: 2px solid red;
+  border: 2px solid #007bff;
+  
 }
 
 .input-container .error-message {
   position: relative;
   left: 0;
-  color: red;
+  color: #007bff;
   font-size: 12px;
   margin-top: 4px;
   display: block;
@@ -30,4 +30,8 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.input-field.error::placeholder{
+  color: #007bff;
 }

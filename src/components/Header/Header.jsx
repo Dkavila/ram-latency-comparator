@@ -1,42 +1,47 @@
 // src/components/Header/Header.jsx
 
 import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next'; 
-import './Header.css'; 
+import { useTranslation } from 'react-i18next';
+import './Header.css';
+import logo from '../../assets/logo.png';
 
 const Header = ({ setLanguage }) => {
   const { t, i18n } = useTranslation();
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [expanded, setExpanded] = useState(false);
 
   const handleLanguageChange = (language) => {
     i18n.changeLanguage(language);
     setLanguage(language);
-    setDropdownOpen(false);
+    setExpanded(false);
   };
 
-  const toggleDropdown = () => {
-    setDropdownOpen(!dropdownOpen);
+  const toggleExpansion = () => {
+    setExpanded(!expanded);
   };
 
-  const currentLanguage = i18n.language.toUpperCase();
+  const languages = ['en', 'pt', 'es'];
+  const currentLanguage = i18n.language;
 
   return (
     <header className="header">
+      <div className="logo">
+        <img src={logo} alt="Logo" className="logo-image" />
+      </div>
       <h1>{t('header.app_name')}</h1>
       <div className="language-selector">
         <button
-          className="language-button"
-          onClick={toggleDropdown}
+          className={`language-button ${expanded ? 'expanded' : ''}`}
+          onClick={toggleExpansion}
         >
-          {currentLanguage}
+          {expanded ? '' : currentLanguage.toUpperCase()}
         </button>
-        {dropdownOpen && (
-          <div className="language-dropdown">
-            <button onClick={() => handleLanguageChange('en')}>EN</button>
-            <button onClick={() => handleLanguageChange('pt')}>PT</button>
-            <button onClick={() => handleLanguageChange('es')}>ES</button>
-          </div>
-        )}
+        <div className={`language-options ${expanded ? 'show' : ''}`}>
+          {languages.map((lang) => (
+            <button key={lang} onClick={() => handleLanguageChange(lang)}>
+              {lang.toUpperCase()}
+            </button>
+          ))}
+        </div>
       </div>
     </header>
   );
