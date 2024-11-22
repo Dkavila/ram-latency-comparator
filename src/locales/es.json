@@ -29,6 +29,9 @@
     "scoreExplanation": "Para diferenciar las memorias, se aplicó una penalización a cada una de ellas en el puntaje. Este es un método subjetivo.",
     "subjectiveMethod": "Este método es subjetivo, lo que significa que no es una medida absoluta, sino más bien una aproximación.",
     "goodScores": "Un puntaje superior a 6 se considera un buen valor."
+  },
+  "footer": {
+    "rightsReserved": "Todos los derechos reservados."
   }
 }
   

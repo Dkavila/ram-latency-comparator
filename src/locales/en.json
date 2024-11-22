@@ -29,6 +29,10 @@
     "scoreExplanation": "To differentiate the memories, a penalty was applied to each one in the score. This is a subjective method.",
     "subjectivity": "This method is subjective, meaning it is not an absolute measure but rather an approximation.",
     "goodScores": "A score above 6 is considered a good value."
+  },
+  "footer": {
+    "rightsReserved": "All rights reserved."
   }
+
 }
   

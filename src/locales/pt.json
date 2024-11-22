@@ -29,6 +29,9 @@
     "scoreExplanation": "Para diferenciar as memórias, foi aplicada uma punição em cada uma delas no score. Este é um método subjetivo.",
     "subjectivity": "Este método é subjetivo, o que significa que não é uma medida absoluta, mas sim uma aproximação.",
     "goodScores": "Um score acima de 6 é considerado um bom valor."
+  },
+  "footer": {
+    "rightsReserved": "Todos os direitos reservados."
   }
 }
   

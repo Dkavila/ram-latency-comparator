@@ -4,6 +4,7 @@ import MemoryList from './components/MemoryList/MemoryList';
 import Header from './components/Header/Header';
 import Disclaimers from './components/Disclaimers/Disclaimers';
 import './App.css';
+import Footer from './components/Footer/Footer';
 
 const App = () => {
   const [memories, setMemories] = useState([]);
@@ -27,8 +28,8 @@ const App = () => {
         <MemoryList memories={memories} removeMemory={removeMemory} />
         <Disclaimers />
       </div>
+      <Footer />
     </div>
   );
 };
-
 export default App;
